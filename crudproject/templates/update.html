@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="container"  >
+    
+    <div class="row">
+        <div class="col-md-12" >
+            <form method="POST"     class="p-3 shadow">
+            {% csrf_token %}
+            <div class="form-group">
+                <h6>SL.NO:</h6>
+                <input type="number" name="slno" class="form-control" value="{{task.slno}}" placeholder="serialnumber" required >
+
+            </div><br>
+                <div class="form-group">
+                    <h6>Item Name</h6>
+                    <input type="text" name="item_name" class="form-control"value="{{task.item_name}}" placeholder="item name">
+                </div><br>
+                <div class="form-group">
+                    <h6>Description</h6>
+            
+                    <input type="text" name="desc" class="form-control" value="{{task.desc}}" placeholder="description">
+                </div><br>
+                <input type="submit" value="submit" class="btn btn-success">
+
+            </form>
+           </div>
+           </div>
+           
+</div>
+{% endblock %}
